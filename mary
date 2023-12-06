@@ -1,0 +1,12 @@
+Sun Nov 19 21:24:17 2023,Mary Smith,marys,ufxxbtwi,100,1000,deposit
+12-06 17:00:41 2023,Mary Smith,mary,ufxxbtwi,102.0,1000.0,deposit
+12-06 17:00:41 2023,Mary Smith,mary,ufxxbtwi,99.0,1000.0,withdraw
+12-06 17:00:41 2023,Mary Smith,mary,ufxxbtwi,99.0,1004.0,deposit
+12-06 17:00:41 2023,Mary Smith,mary,ufxxbtwi,99.0,999.0,deposit
+12-06 17:04:19 2023,Mary Smith,mary,ufxxbtwi,103.5,999.0,deposit
+12-06 17:04:19 2023,Mary Smith,mary,ufxxbtwi,100.1,999.0,withdraw
+12-06 17:04:19 2023,Mary Smith,mary,ufxxbtwi,100.1,1003.44,deposit
+12-06 17:04:19 2023,Mary Smith,mary,ufxxbtwi,100.1,559.0400000000001,deposit
+12-06 17:09:37 2023,Mary Smith,mary,ufxxbtwi,100.1,-439.9599999999999,deposit
+12-06 17:10:00 2023,Mary Smith,mary,ufxxbtwi,100.1,448.0400000000001,deposit
+12-06 17:15:03 2023,Mary Smith,mary,ufxxbtwi,300.10,448.04,deposit

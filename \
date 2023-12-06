@@ -1,0 +1,121 @@
+#for ref Sun Nov 19 20:25:14 2023,John Smith,johns,ufxxbtwi,100,1000,deposit
+import encrypt
+import csv
+import sys
+from datetime import datetime
+current_time = datetime.now()
+formmated = current_time.strftime("%m-%d %H:%M:%S %Y")
+def file_reader(user):
+    try:
+        with open(f'{user}', "r") as data:
+            read = csv.reader(data)
+            # goes through the rows to get the fourth element of each row 
+            for row in read:
+                password_1 = row[3]
+                realname = row[1]
+                return password_1,realname
+                
+                
+        
+    except Exception as e:
+        print(f"Something went wrong. Please enter a valid account.\nError type: {e}")
+        sys.exit()
+        
+
+
+def login(user,realname,encypted_password):
+    print(f"Welcome back {realname}")
+    while True:
+        try:
+            x = int(input("""What would you like to do today?
+1. Check balance
+2. Deposit into checkings
+3. Withdraw from checkings
+4. Deposit into savings
+5. Withdraw from savings
+6. Exit
+Enter the number of what you want to do: """))
+
+            if x == 1:
+                check_balance(user,realname,encypted_password)
+            elif x == 2:
+                deposit_checkings(user,realname,encypted_password)
+            elif x == 3:
+                withdraw_checkings(user,realname,encypted_password)
+            elif x == 4:
+                print("44444444")
+                #deposit_savings()
+            elif x == 5:
+                print("5555")
+                #withdraw_savings()
+            elif x == 6:
+                print("Exiting. Have a great day!")
+                sys.exit()
+            else:
+                print("Please enter a number between 1 and 6.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+ 
+def check_balance(user,realname,encypted_password):
+    print("Checking balance...")  
+    with open(f'{user}', "r") as data:
+        read = csv.reader(data)
+        for row in read:
+            checking = row[4]
+            savings = row[5]
+    print(f"you have {checking} in your checkings and {savings} in your savings\n\n\n\n")
+    login(user,realname,encypted_password)
+
+def deposit_checkings(user,realname,encypted_password):
+    
+    with open(f'{user}', "r") as data:
+        for lines in data:
+            pass
+        read = csv.reader(data)
+        for row in read:
+            checking = row[4]
+            savings = row[5]
+    amount = float(input("please enter the amount you wish to deposit into checkings"))
+    checking = int(checking)
+    new_tot = amount + checking
+    with open(f'{user}', "a") as data:
+        data.write(f"{formmated},{realname},{user},{encypted_password},{new_tot},{savings},Deposit")
+    login(user,realname,encypted_password)
+        
+def withdraw_checkings(user,realname,encypted_password):
+    with open(f'{user}', "r") as data:
+        read = csv.reader(data)
+        for row in read:
+            checking = row[4]
+            savings = row[5]
+    amount = float(input("please enter the amount you wish to withdraw from checkings"))
+    checking = int(checking)
+    new_tot = checking - amount
+    with open(f'{user}', "a") as data:
+        data.write(f"{formmated},{realname},{user},{encypted_password},{new_tot},{savings},Withdraw")
+    login(user,realname,encypted_password)
+
+
+
+
+def main():
+    
+    #print(formmated)
+
+    user = input("Please enter your username: ")
+    password_1,realname = file_reader(user)
+    enterpass = input("Please enter your password: ")   
+    encrypted_password = encrypt.encrypt(enterpass)
+    #print(f"debug",encrypted_password)
+    #print(f"DEBUG file password{password_1}")
+    if encrypted_password == password_1:
+        login(user,realname,encrypted_password) 
+    elif encrypted_password != password_1:
+        print("sorry that password is incorect please try again")
+        sys.exit()
+    
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,14 @@
+Sun Nov 19 20:25:14 2023,John Smith,johns,ufxxbtwi,100,1000,deposit
+12-06 16:20:59 2023,John Smith,john,ufxxbtwi,200.0,1000,Withdraw
+some_value,John Smith,john,ufxxbtwi,300.0,1000.0,deposit
+some_value,John Smith,john,ufxxbtwi,400.0,1000.0,deposit
+12-06 16:33:41 2023,John Smith,john,ufxxbtwi,500.0,1000.0,deposit
+12-06 16:39:53 2023,John Smith,john,ufxxbtwi,600.0,1000.0,deposit
+12-06 16:41:37 2023,John Smith,john,ufxxbtwi,400.0,1000.0,withdraw
+12-06 16:46:44 2023,John Smith,john,ufxxbtwi,1500.0,1000.0,deposit
+12-06 16:47:34 2023,John Smith,john,ufxxbtwi,1500.0,1500.0,deposit
+12-06 16:50:39 2023,John Smith,john,ufxxbtwi,1590.0,1500.0,deposit
+12-06 16:50:39 2023,John Smith,john,ufxxbtwi,1590.0,1500.0,deposit
+12-06 16:50:39 2023,John Smith,john,ufxxbtwi,1500.0,1500.0,withdraw
+12-06 16:50:39 2023,John Smith,john,ufxxbtwi,1500.0,1590.0,deposit
+12-06 16:50:39 2023,John Smith,john,ufxxbtwi,1500.0,1500.0,deposit
